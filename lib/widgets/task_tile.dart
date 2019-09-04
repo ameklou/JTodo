@@ -27,13 +27,3 @@ class TaskTile extends StatelessWidget{
 }
 
 
-
-
-//TaskCheckBox(
-//checkboxState: isChecked,
-//toggleCheckbox: (value) {
-//setState(() {
-//isChecked = value;
-//});
-//},
-//),

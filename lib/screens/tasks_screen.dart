@@ -14,18 +14,6 @@ class _TasksScreenState extends State<TasksScreen> {
     Task(name: 'Call Epiphanie'),
     Task(name: 'Buy Dado'),
     Task(name: 'Clean Tabitha'),
-    Task(name: 'Call Epiphanie'),
-    Task(name: 'Buy Dado'),
-    Task(name: 'Clean Tabitha'),
-    Task(name: 'Call Epiphanie'),
-    Task(name: 'Buy Dado'),
-    Task(name: 'Clean Tabitha'),
-    Task(name: 'Call Epiphanie'),
-    Task(name: 'Buy Dado'),
-    Task(name: 'Clean Tabitha'),
-    Task(name: 'Call Epiphanie'),
-    Task(name: 'Buy Dado'),
-    Task(name: 'Clean Tabitha'),
   ];
 
   @override
@@ -35,7 +23,14 @@ class _TasksScreenState extends State<TasksScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
-              context: context, builder: (context) => AddTaskScreen());
+              context: context, builder: (context) => AddTaskScreen((newTask){
+                setState(() {
+                  tasks.add(Task(name: newTask));
+                });
+                Navigator.pop(context);
+
+
+          }));
         },
         backgroundColor: Colors.lightBlueAccent,
         child: Icon(Icons.add),
