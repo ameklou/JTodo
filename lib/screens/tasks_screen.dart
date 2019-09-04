@@ -55,7 +55,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   height: 10,
                 ),
                 Text(
-                  "toodeoe",
+                  "JTodo",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 30,
@@ -63,7 +63,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   ),
                 ),
                 Text(
-                  '12 Tasks',
+                  '${tasks.length} Tasks',
                   style: TextStyle(),
                 ),
               ],
