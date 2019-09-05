@@ -24,7 +24,7 @@ class AddTaskScreen extends StatelessWidget {
                 "Add a task",
                 style: TextStyle(
                     fontSize: 30,
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xFF1b0000),
                     fontWeight: FontWeight.w600),
                 textAlign: TextAlign.center,
               ),
@@ -32,10 +32,20 @@ class AddTaskScreen extends StatelessWidget {
                 height: 10,
               ),
               TextField(
+
                 autofocus: true,
                 onChanged: (value){
                   newTaskTitle=value;
-                },
+                },cursorColor:Color(0xFF3e2723) ,
+
+                decoration: InputDecoration(
+
+                  fillColor: Color(0xFF3e2723),
+
+                  hintStyle: TextStyle(
+                    color: Colors.black
+                  )
+                ),
               ),
               SizedBox(
                 height: 20,
@@ -48,7 +58,7 @@ class AddTaskScreen extends StatelessWidget {
                   'Save',
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.lightBlueAccent,
+                color: Color(0xFF1b0000),
               )
             ],
           ),

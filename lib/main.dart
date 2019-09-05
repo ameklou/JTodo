@@ -9,6 +9,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: TasksScreen(),
+      theme: ThemeData.light().copyWith(
+        primaryColor:Color(0xFF3e2723),
+        primaryColorDark: Color(0xFF1b0000),
+
+
+
+      ),
 
 
     );

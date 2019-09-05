@@ -11,7 +11,7 @@ class TasksScreen extends StatefulWidget {
 class _TasksScreenState extends State<TasksScreen> {
 
   List<Task> tasks = [
-    Task(name: 'Call Epiphanie'),
+    Task(name: 'Call J'),
     Task(name: 'Buy Dado'),
     Task(name: 'Clean Tabitha'),
   ];
@@ -19,7 +19,7 @@ class _TasksScreenState extends State<TasksScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Theme.of(context).primaryColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
@@ -32,8 +32,8 @@ class _TasksScreenState extends State<TasksScreen> {
 
           }));
         },
-        backgroundColor: Colors.lightBlueAccent,
-        child: Icon(Icons.add),
+        backgroundColor: Theme.of(context).primaryColorDark,
+        child: Icon(Icons.add,color: Colors.white,),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,6 +47,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   child: Icon(
                     Icons.list,
                     size: 30,
+                    color: Color(0xFF1b0000),
                   ),
                   backgroundColor: Colors.white,
                   radius: 30,
@@ -64,7 +65,9 @@ class _TasksScreenState extends State<TasksScreen> {
                 ),
                 Text(
                   '${tasks.length} Tasks',
-                  style: TextStyle(),
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
                 ),
               ],
             ),
